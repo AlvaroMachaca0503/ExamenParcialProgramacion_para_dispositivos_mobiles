@@ -1,0 +1,9 @@
+[versions]
+agp = "8.1.1"
+kotlin = "1.9.0"
+navigation = "2.7.3"
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidxNavigationSafeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Onepiece_Final</string>
+    <string name="welcome_title">Bienvenido al Quiz de One Piece</string>
+    <string name="welcome_description">Pon a prueba tus conocimientos sobre One Piece. Responde 10 preguntas y demuestra que eres un verdadero fanático.</string>
+    <string name="start_button">Comenzar</string>
+        <string name="tiempo_agotado">¡Tiempo Agotado!</string>
+        <string name="respuesta_correcta">¡Respuesta Correcta!</string>
+        <string name="respuesta_incorrecta">Respuesta Incorrecta</string>
+        <string name="no_respondiste_a_tiempo">No lograste responder a tiempo.\n\n%s</string>
+
+
+    </resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/questionFragment">
+
+    <!-- QuestionFragment -->
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.onepiece_final.QuestionFragment"
+        android:label="Question Fragment"
+        tools:layout="@layout/fragment_question">
+
+        <argument
+            android:name="indicePreguntaActual"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="puntuacionActual"
+            app:argType="integer"
+            android:defaultValue="0" />
+
+        <action
+            android:id="@+id/action_questionFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+    </fragment>
+
+    <!-- AnswerFragment -->
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.onepiece_final.AnswerFragment"
+        android:label="Answer Fragment"
+        tools:layout="@layout/fragment_answer">
+
+        <argument
+            android:name="questionText"
+            app:argType="string" />
+        <argument
+            android:name="totalPreguntas"
+            app:argType="integer" />
+        <argument
+            android:name="indicePreguntaActual"
+            app:argType="integer" />
+        <argument
+            android:name="puntuacionActual"
+            app:argType="integer" />
+        <argument
+            android:name="noRespondioATiempo"
+            app:argType="boolean" />
+        <argument
+            android:name="esCorrecto"
+            app:argType="boolean" />
+        <argument
+            android:name="explicacion"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_answerFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/action_answerFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <!-- ResultFragment -->
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.onepiece_final.ResultFragment"
+        android:label="Result Fragment"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <argument
+            android:name="puntuacionFinal"
+            app:argType="integer" />
+        <argument
+            android:name="totalPreguntas"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.onepiece_final.WelcomeFragment"
+        android:label="Welcome Fragment"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_welcomeFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+
+
+</navigation>

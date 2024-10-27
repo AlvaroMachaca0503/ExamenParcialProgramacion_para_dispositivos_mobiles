@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- fragment_question.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Barra de progreso -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:max="100"
+            android:progress="0" />
+
+        <!-- Temporizador -->
+        <TextView
+            android:id="@+id/textViewTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiempo restante: 15 s"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto de la pregunta -->
+        <TextView
+            android:id="@+id/textViewQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aquí va la pregunta"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Grupo de RadioButtons para las opciones -->
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Las opciones se agregarán dinámicamente -->
+        </RadioGroup>
+
+        <!-- Botón para confirmar la respuesta -->
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Responder"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>
